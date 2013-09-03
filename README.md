@@ -53,3 +53,8 @@ bash ./diskimage.sh
 # Run image in Qemu :)
 bash ./qemu.sh
 ```
+
+## Progress
+  - Compiles :white_check_mark:
+  - Builds Image :white_check_mark:
+  - Boots :x:
