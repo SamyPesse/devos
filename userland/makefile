@@ -1,8 +1,7 @@
-ALLDIR=$(wildcard *)
 
 all:
-	-@for file in $(ALLDIR); do make -C $$file; done; true
+	make -C "helloworld" all
 
 clean:
-	-@for file in $(ALLDIR); do make -C $$file clean; done; true
+	make -C "helloworld" clean
 
