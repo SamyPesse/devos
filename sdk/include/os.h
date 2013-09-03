@@ -4,7 +4,7 @@
 
 #include <sys/types.h>
 
-#include <api/kernel/syscall.h>
-#include <api/kernel/syscall_table.h>
+#include "../../kernel/core/api/kernel/syscall.h"
+#include "../../kernel/core/api/kernel/syscall_table.h"
 
 #endif 

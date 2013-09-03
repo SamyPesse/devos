@@ -71,7 +71,7 @@ void operator delete(void *ptr)
 }
 
 #ifndef __arm__
-void* operator new(long unsigned int len) 
+void* operator new(size_t len) 
 {
 	return (void*)kmalloc(len);
 }
@@ -81,7 +81,7 @@ void operator delete[](void *ptr)
 	::operator delete(ptr);
 }
 
-void* operator new[](long unsigned int len) 
+void* operator new[](size_t len) 
 {
 	return ::operator new(len);
 }
@@ -89,7 +89,7 @@ void* operator new[](long unsigned int len)
 #else
 
 	
-void* operator new(long unsigned int len) 
+void* operator new(size_t len) 
 {
 	return (void*)kmalloc(len);
 }
@@ -99,7 +99,7 @@ void operator delete[](void *ptr)
 	::operator delete(ptr);
 }
 
-void* operator new[](long unsigned int len) 
+void* operator new[](size_t len) 
 {
 	return ::operator new(len);
 }
