@@ -20,3 +20,7 @@
 
 # Other
 /userland/helloworld/hello
+
+# SDK binaries
+/sdk/bootdisk/bin/hello
+/sdk/c.img
