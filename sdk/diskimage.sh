@@ -1,4 +1,5 @@
 #/bin/bash/
+dd bs=512 count=2880 if=/dev/zero of=./c.img
 fdisk -l -u ./c.img
 losetup -o 2048 /dev/loop1 ./c.img
 
