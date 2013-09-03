@@ -11,3 +11,15 @@
 *.lai
 *.la
 *.a
+
+# Elf binaries
+*.elf
+
+# Bootdisk
+bootdisk
+
+# Vagrant
+/.vagrant/
+
+# Other
+/userland/helloworld/hello
