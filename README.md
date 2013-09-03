@@ -31,7 +31,7 @@ Just type :
 
 	make all
 	
-## To emulate the operatingsystem :
+## To emulate the operating system :
 
 You will need : qemu and somes unix utils like grub
 	
