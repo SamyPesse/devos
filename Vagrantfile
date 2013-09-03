@@ -10,11 +10,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise64"
+  config.vm.box = "lucid32"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -95,7 +95,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   $script = %Q{
     sudo apt-get update
-    sudo apt-get install nasm make build-essential qemu -y
+    sudo apt-get install nasm make build-essential grub qemu -y
   }
 
   
