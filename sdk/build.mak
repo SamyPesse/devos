@@ -1,6 +1,3 @@
-OS_VERSION=5.0
-
-
 CP       = cp
 RM       = rm
 MKDIR    = mkdir
@@ -17,7 +14,7 @@ STRIP    = strip
 INCDIR   = $(SDKDIR)/include
 LIBDIR   = $(SDKDIR)/lib
 
-DEFS:= $(DEFS) -DMYOS_VERSION=$(OS_VERSION)
+DEFS:= $(DEFS)
 
 CFLAGS   = -I $(INCDIR) -Wall -fno-builtin -g -O2 -w -trigraphs   -fno-exceptions -fno-stack-protector -O0 -m32  -fno-rtti $(DEFS)
 CXXFLAGS = $(CFLAGS) 
@@ -40,15 +37,9 @@ $(TARGET): $(OBJS)
 install:
 	cp $(TARGET) $(SDKDIR)/bootdisk/bin/$(TARGET)
 
-geniso:
-	cd $(SDKDIR) &&	sh ./cdrom.sh
-	
 run:
 	cd $(SDKDIR) &&	sh ./diskimage.sh
 	cd $(SDKDIR) &&	sh ./qemu.sh
-
-installpc:
-	sudo cp $(TARGET) /boot/
 
 %.o: %.c
 	$(CC) $(CFLAGS)  -c $< 
@@ -63,14 +54,4 @@ installpc:
 	
 clean:
 	rm -rf *.o $(TARGET)
-
-
-
-
-
-
-
-
-
-
 

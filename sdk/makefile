@@ -1,6 +1,6 @@
 
 all: 
-	@echo "Building Koala LibC"
+	@echo "Building LibC"
 	make -C ./src/libc
 	
 clean:

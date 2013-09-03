@@ -1,16 +1,15 @@
 ARCH=x86
-SDKDIR=../../../sdk
 KERNEL=kernel.elf
 SDKDIR=../sdk
-INCDIR= -I ./ -I ./modules -I ./core -I ./arch/$(ARCH) -I $(SDKDIR)/include/koala
+INCDIR= -I ./ -I ./modules -I ./core -I ./arch/$(ARCH)
 
 
 include ./arch/$(ARCH)/config.make
 
-include ./runtime/makefile
-include ./core/makefile
-include ./modules/makefile
-include ./arch/$(ARCH)/makefile
+include ./runtime/Makefile
+include ./core/Makefile
+include ./modules/Makefile
+include ./arch/$(ARCH)/Makefile
 
 FLAG :=$(FLAG) -D__$(ARCH)__
 PLATFORMS= `find ./arch/ -type d | sed "s/.*\///" | sort`
@@ -23,7 +22,7 @@ $(KERNEL): $(OBJS)
 	cp $(KERNEL) $(SDKDIR)/bootdisk/
 	
 help:
-	@echo "Makefile for Koalas Kernel."
+	@echo "Makefile for Kernel."
 	@echo "Please see COPYING for licensing information."
 	@echo "Output should be: "$(KERNEL)
 	@echo "Usage: make [ all | clean] " 

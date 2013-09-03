@@ -261,8 +261,7 @@ STARTO= $(START:.c=.o)
 OBJO = $(OBJS:.c=.o) 
 OBJSO= $(ASMOBJS:.S=.o)
 OBJ=libc.a crt
-CC=gcc -w -m32 -Wa,--32  -g -nostdlib -nostdinc -trigraphs  -I $(SDKDIR)/include -I $(SDKDIR)/include/koala -c
-OS=koala
+CC=gcc -w -m32 -Wa,--32  -g -nostdlib -nostdinc -trigraphs  -I $(SDKDIR)/include -c
 SDKDIR=../..
 
 all: $(OBJ) 

@@ -1,29 +1,29 @@
 SDKDIR=./sdk
-VERSION=12.4
+VERSION=1
 
 help:
-	@echo "Makefile for Koala Operating System."
-	@echo "Please see COPYING for licensing information."
+	@echo "Makefile for Building Dev Operating System."
+	@echo "Please see LICENSE for licensing information."
 	@echo "Usage: make [ all | clean | help | build] " 
 	@echo ""
 	@echo "Version" $(VERSION)
 	@echo
 
 all: 
-	@echo "Building Koala Kernel"
+	@echo "Building Kernel"
 	make -C ./kernel
-	@echo "Building Koala SDK"
+	@echo "Building SDK"
 	make -C ./sdk
-	@echo "Building Koala Userland"
+	@echo "Building Userland"
 	make -C ./userland
 	
 
 build:
-	zip -r koala-$(VERSION).zip ./
+	zip -r devos-$(VERSION).zip ./
 
 
 emulate:
-	@echo "Running Koala Operating System."
+	@echo "Running Dev Operating System."
 
 clean:
 	make -C ./kernel clean
