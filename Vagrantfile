@@ -93,14 +93,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
 
-  $script = <<SCRIPT
-  sudo apt-get update
-  sudo apt-get install nasm build-essential qemu
-  SCRIPT
+  $script = %Q{
+    sudo apt-get update
+    sudo apt-get install nasm make build-essential qemu -y
+  }
 
-  Vagrant.configure("2") do |config|
-    config.vm.provision :shell, :inline => $script
-  end
+  
+  config.vm.provision :shell, :inline => $script
+  
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
