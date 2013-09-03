@@ -1,6 +1,10 @@
 # (Very) Basic Operating System in C++
 
+[![Code Now](https://friendco.de/widgets/image/codenow?url=https%3A%2F%2Fgithub.com%2FSamyPesse%2Fos.git&file=&style=vertical&private=true&create=false&prepare=true)](https://friendco.de/widgets/url/codenow?url=https%3A%2F%2Fgithub.com%2FSamyPesse%2Fos.git&file=&style=vertical&private=true&create=false&prepare=true)
+
 This code was written several years ago as one of my first projects when I was in High School so it's normal if some parts of the code looks like "crap".
+
+But some parts of the code are usefull to learn how to create a bootable operating system with memory pagination, multitasking, virtual memory, EXT2, ...
 
 ## Features :
 
