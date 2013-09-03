@@ -19,7 +19,7 @@ typedef signed long long	s64;
 
 typedef unsigned char u_char;
 
-typedef int ssize_t;
+typedef unsigned int size_t;
 typedef int pid_t;
 typedef s64 ino_t;
 typedef s64 off_t;
