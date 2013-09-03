@@ -15,9 +15,6 @@
 # Elf binaries
 *.elf
 
-# Bootdisk
-bootdisk
-
 # Vagrant
 /.vagrant/
 
