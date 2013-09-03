@@ -48,7 +48,7 @@ make all
 cd ./sdk
 
 # Build Disk image (requires old grub)
-bash ./diskimage.sh
+sudo bash ./diskimage.sh
 
 # Run image in Qemu :)
 bash ./qemu.sh
