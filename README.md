@@ -6,6 +6,7 @@ This code was written several years ago as one of my first projects when I was i
 
 But some parts of the code are usefull to learn how to create a bootable operating system with memory pagination, multitasking, virtual memory, EXT2, ...
 
+
 ## Features :
 
 	* Code in C++
@@ -23,19 +24,32 @@ But some parts of the code are usefull to learn how to create a bootable operati
 		* Boch VBE
 
 
-## To build the kernel :
+## Build & Run using Vagrant (for OS X and Linux users)
 
-You will need : gcc, make, binutils (not cygwin)
-It was tested on : Ubuntu (i386).
-Just type :
+Make sure you have both Vagrant installed and this repo cloned (and an open terminal in it's folder)
 
-	make all
-	
-## To emulate the operating system :
+Then run the following commands (ignore comment lines sarting with ```#```):
 
-You will need : qemu and somes unix utils like grub
-	
-## To build an application :
+```bash
+# Starts Vagrant VM
+# This will start an ubuntu machine and install build-essential, make, Qemu ...
+vagrant up
 
-You will need : gcc, make, binutils (not cygwin)
-It was tested on : Ubuntu (i386).
+# SSH into machine
+vagrant ssh
+
+# Once SSHed
+cd /vagrant
+
+# Build kernel, userland ...
+make all
+
+# Go to SDK
+cd ./sdk
+
+# Build Disk image (requires old grub)
+bash ./diskimage.sh
+
+# Run image in Qemu :)
+bash ./qemu.sh
+```
