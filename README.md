@@ -57,4 +57,4 @@ make emulate
 ## Progress
   - Compiles :white_check_mark:
   - Builds Image :white_check_mark:
-  - Boots :x:
+  - Boots :white_check_mark:
