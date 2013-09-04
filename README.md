@@ -7,6 +7,8 @@ This code was written several years ago as one of my first projects when I was i
 But some parts of the code are usefull to learn how to create a bootable operating system with memory pagination, multitasking, virtual memory, EXT2, ...
 
 
+[![Screen](https://raw.github.com/SamyPesse/devos/master/screens/1.png)](https://raw.github.com/SamyPesse/devos/master/screens/1.png)
+
 ## Features :
 
 	* Code in C++
@@ -22,6 +24,10 @@ But some parts of the code are usefull to learn how to create a bootable operati
 		* Clock
 		* EXT2 (read only)
 		* Boch VBE
+	* Userland :
+		* API Posix
+		* LibC
+		* "Can" run a shell or some excutables like Lua, ...
 
 
 ## Build & Run using Vagrant (for OS X and Linux users)
@@ -44,14 +50,8 @@ cd /vagrant
 # Build kernel, userland ...
 make all
 
-# Go to SDK
-cd ./sdk
-
-# Build Disk image (requires old grub)
-sudo ./diskimage.sh
-
-# Run image in Qemu :)
-./qemu.sh
+# Run emulation
+make emulate
 ```
 
 ## Progress
