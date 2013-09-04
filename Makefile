@@ -24,6 +24,8 @@ build:
 
 emulate:
 	@echo "Running Dev Operating System."
+	cd ./sdk && sudo ./diskimage.sh
+	cd ./sdk && ./qemu.sh
 
 clean:
 	make -C ./kernel clean

@@ -1,7 +1,25 @@
 #/bin/bash/
-dd bs=512 count=2880 if=/dev/zero of=./c.img
+qemu-img create c.img 10MB
+fdisk ./c.img  << EOF
+x
+c
+4
+h
+16
+s
+63
+r
+n
+p
+1
+1
+4
+a
+1
+w
+EOF
 fdisk -l -u ./c.img
-losetup -o 2048 /dev/loop1 ./c.img
+losetup -o 32256 /dev/loop1 ./c.img
 
 mke2fs /dev/loop1
 mount  /dev/loop1 /mnt/
