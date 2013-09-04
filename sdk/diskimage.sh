@@ -1,5 +1,5 @@
 #/bin/bash/
-qemu-img create c.img 10MB
+qemu-img create c.img 2MB
 fdisk ./c.img  << EOF
 x
 c
@@ -27,7 +27,7 @@ cp -R bootdisk/* /mnt/
 umount /mnt/
 grub --device-map=/dev/null << EOF
 device (hd0) ./c.img
-geometry (hd0) 20 16 63
+geometry (hd0) 4 16 63
 root (hd0,0)
 setup (hd0)
 quit
