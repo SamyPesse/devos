@@ -32,7 +32,7 @@ But some parts of the code are usefull to learn how to create a bootable operati
 
 Make sure you have both Vagrant installed and this repo cloned (and an open terminal in it's folder)
 
-Then run the following commands (ignore comment lines sarting with ```#```):
+Then run the following commands (ignore comment lines starting with ```#```):
 
 ```bash
 # Starts Vagrant VM
