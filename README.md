@@ -2,7 +2,7 @@
 
 This code was written several years ago as one of my first projects when I was in High School so it's normal if some parts of the code looks like "crap".
 
-But some parts of the code are usefull to learn how to create a bootable operating system with memory pagination, multitasking, virtual memory, EXT2, ...
+But some parts of the code are useful to learn how to create a bootable operating system with memory pagination, multitasking, virtual memory, EXT2, ...
 
 
 [![Screen](https://raw.github.com/SamyPesse/devos/master/screens/1.png)](https://raw.github.com/SamyPesse/devos/master/screens/1.png)
